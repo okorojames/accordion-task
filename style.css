@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #dddddd;
+}
+.container {
+  width: 400px;
+  min-height: 100dvh;
+  margin: 0 auto;
+  background: #606060;
+}
+
+.accordion {
+  width: 96%;
+  margin: 0 auto;
+  background: #ffffff;
+  color: hsl(0, 0%, 14%);
+  padding: 10px 15px;
+  border-radius: 15px;
+  margin-top: -8px;
+  transition: 1s;
+}
+
+.accordion.one {
+  background: #232323;
+  color: #ffffff;
+  margin-top: 0;
+}
+
+.accordion-img-one {
+  width: 100%;
+  object-fit: cover;
+}
+
+.accordion.two {
+  color: #1a1a1a;
+  background: hsl(0, 0%, 98%);
+}
+
+.accordion.three {
+  color: #1a1a1a;
+  background: hsl(0, 0%, 93%);
+}
+
+.accordion.four {
+  color: #1a1a1a;
+  background: hsl(0, 0%, 88%);
+}
+
+.accordion.five {
+  color: #1a1a1a;
+  background: hsl(0, 0%, 83%);
+}
+
+.accordion.six {
+  color: #1a1a1a;
+  background: hsl(0, 0%, 78%);
+}
+
+.accordion.seven {
+  color: hwb(0 97% 3%);
+  background: hsl(0, 0%, 11%);
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 12px 0;
+}
+
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: 1s;
+  transition-delay: 0s;
+}
+.accordion.show-body .accordion-body {
+  max-height: 1000px;
+  transition: 1s;
+  transition-delay: 0s;
+}
+.accordion.show-body {
+  margin-top: 0;
+  transition: margin-top 0.45s;
+  transition-delay: 0s;
+}
+
+.accordion.one.show-body ~ .accordion.two {
+  margin-top: 0;
+}
